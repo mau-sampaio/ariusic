@@ -9,7 +9,7 @@
   --border: #ffffff17;
   --text: #f3f1fa;
   --text-dim: #a79fc2;
-  --text-faint: #6f6790;
+  --text-faint: #8f86ab;
   --radius: 18px;
   --container: 1180px;
   --ff-display: 'Space Grotesk', 'Manrope', sans-serif;
@@ -440,7 +440,7 @@ h3 { font-size: 1.15rem; }
   padding-bottom: 50px;
 }
 .footer-brand p { color: var(--text-faint); margin-top: 14px; font-size: 0.9rem; max-width: 260px; }
-.footer-col h5 {
+.footer-col h3 {
   font-family: var(--ff-display);
   font-size: 0.85rem;
   letter-spacing: 0.04em;
@@ -551,4 +551,20 @@ h3 { font-size: 1.15rem; }
 @media (max-width: 760px) {
   .whatsapp-float { right: 16px; bottom: 16px; width: 52px; height: 52px; }
   .whatsapp-float svg { width: 27px; height: 27px; }
+}
+
+/* ==================== Language switch ==================== */
+.lang-switch {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: color .2s ease, border-color .2s ease;
+  white-space: nowrap;
+}
+.lang-switch:hover {
+  color: var(--text);
+  border-color: var(--purple-light);
 }
