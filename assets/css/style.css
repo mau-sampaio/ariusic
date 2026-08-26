@@ -421,6 +421,24 @@ h3 { font-size: 1.15rem; }
 .text-link { color: var(--purple-light); text-decoration: underline; text-underline-offset: 3px; }
 .text-link:hover { color: var(--text); }
 
+.related-links {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+.related-links a {
+  color: var(--text-dim);
+  font-size: 0.98rem;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  transition: color .2s ease;
+}
+.related-links a:hover { color: var(--purple-light); }
+.related-links li:last-child a { border-bottom: none; }
+
 .about-visual {
   display: flex;
   align-items: center;
