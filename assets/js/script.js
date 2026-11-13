@@ -1,3 +1,16 @@
+// Rastreamento de cliques no WhatsApp (evento "whatsapp_click" no GA4)
+document.addEventListener('click', (e) => {
+  const link = e.target.closest && e.target.closest('a[href^="https://wa.me/"]');
+  if (!link || typeof window.gtag !== 'function') return;
+  const path = location.pathname;
+  window.gtag('event', 'whatsapp_click', {
+    link_text: ((link.textContent || '').trim() || link.getAttribute('aria-label') || 'icone').replace(/\s+/g, ' ').slice(0, 80),
+    market: path.indexOf('/br/') === 0 ? 'br' : 'pt',
+    page_path: path,
+    transport_type: 'beacon'
+  });
+}, true);
+
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const nav = document.getElementById('nav');
